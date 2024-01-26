@@ -18,29 +18,7 @@ function PendingAnnonce() {
 
   useEffect(() => {
     AnnonceService.getAllAnnonces().then((response) => {
-      const test = [
-        {id: 1, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 2, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 3, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 4, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 5, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 6, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 7, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 8, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 9, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 10, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 11, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 12, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 13, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 14, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 15, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 16, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-        {id: 17, dateAnnonce: '2024-10-23', nomMarque: 'test', nomModele: 'modele', description: 'desc', nomUsers: 'nom', prenomUsers: 'Prenom', prixVente: '1000'},
-      ];
-
-      setAnnonces(test);
-
-      // setAnnonces(response.data);
+      setAnnonces(response.data);
     });
   }, []);
 
