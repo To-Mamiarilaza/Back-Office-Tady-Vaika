@@ -1,0 +1,39 @@
+.crud-annonce-div .pending-list {
+  font-size: 12px;
+}
+.crud-annonce-div .pending-list th,
+.crud-annonce-div .pending-list td {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.crud-annonce-div .pending-list td {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.crud-annonce-div .pending-list .prix {
+  text-align: right;
+}
+.crud-annonce-div .detail-link {
+  color: #EF2929;
+  text-decoration: none;
+}
+.crud-annonce-div .detail-link i {
+  font-size: 14px;
+}
+.crud-annonce-div .modal-title {
+  font-size: 14px;
+  color: #161616;
+}
+.crud-annonce-div .form-label {
+  font-size: 12px;
+  color: #686868;
+}
+.crud-annonce-div .custom-input {
+  font-size: 12px;
+}
+.crud-annonce-div .custom-input:focus {
+  border-color: rgba(245, 38, 24, 0.5019607843) !important;
+  box-shadow: 0 0 0 0.25rem rgba(239, 41, 41, 0.3137254902) !important;
+}/*# sourceMappingURL=crudAnnonce.css.map */

@@ -1,0 +1,141 @@
+.fiche-container .detail {
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  background-color: #101010;
+}
+.fiche-container .detail .accordion {
+  padding-top: 8px;
+}
+.fiche-container .detail .accordion .accordion-item {
+  background: none !important;
+  border-bottom: none !important;
+}
+.fiche-container .detail .accordion .accordion-button {
+  background: none;
+  color: #D9D9D9;
+  border-bottom: #686868 1px solid;
+  border-radius: 0px !important;
+  letter-spacing: 5px;
+  box-shadow: none;
+}
+.fiche-container .detail .accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path%20fill-rule='evenodd'%20d='M1.646%204.646a.5.5%200%200%201%20.708%200L8%2010.293l5.646-5.647a.5.5%200%200%201%20.708.708l-6%206a.5.5%200%200%201-.708%200l-6-6a.5.5%200%200%201%200-.708z'/></svg>");
+}
+.fiche-container .detail .accordion .accordion-button:focus {
+  box-shadow: none;
+}
+.fiche-container .detail .accordion .accordion-button:active {
+  box-shadow: none;
+}
+.fiche-container .detail .accordion .accordion-body .detail-title {
+  font-size: 12px;
+  font-weight: 300;
+  color: #D9D9D9;
+}
+.fiche-container .detail .accordion .accordion-body .detail-content {
+  color: #dddddd;
+  font-size: 14px;
+}
+.fiche-container .detail .accordion .accordion-body .piece {
+  color: #D9D9D9;
+  font-size: 14px;
+}
+.fiche-container .detail .accordion .accordion-body .progress .progress-bar {
+  background-color: #EF2929;
+}
+.fiche-container .description {
+  margin-right: 32%;
+}
+.fiche-container .description .marque {
+  font-size: 12px;
+  color: #686868;
+}
+.fiche-container .description .model {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+.fiche-container .description .version {
+  font-size: 12px;
+  color: #686868;
+  font-weight: 300;
+}
+.fiche-container .description .price {
+  font-weight: 400;
+  font-size: 16px;
+  color: #ef2929;
+}
+.fiche-container .description .numero {
+  font-size: 12px;
+  color: #686868;
+}
+.fiche-container .description .photo-gallery .carousel-inner img {
+  width: 100%;
+  height: 430px;
+}
+.fiche-container .description .photo-gallery .controller {
+  margin-top: 35px;
+}
+.fiche-container .description .photo-gallery .controller .custom-action-button {
+  border: 1px solid #686868;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  text-align: center;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.fiche-container .description .photo-gallery .controller .custom-action-button span {
+  width: 20px;
+  height: 20px;
+}
+.fiche-container .description .photo-gallery .controller .custom-action-button .prev-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23686868'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+}
+.fiche-container .description .photo-gallery .controller .custom-action-button .next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23686868'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.fiche-container .description .photo-gallery .controller .custom-action-button:hover {
+  box-shadow: 0 0 0 0.25rem rgba(239, 41, 41, 0.3137254902);
+  border: rgba(239, 41, 41, 0.3137254902);
+}
+.fiche-container .description .photo-gallery .controller .custom-indicator button {
+  height: 12px;
+  width: 12px;
+  border: none;
+  background-color: rgba(239, 41, 41, 0.5019607843);
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+.fiche-container .description .photo-gallery .controller .custom-indicator .active {
+  outline: 2px solid #F52618;
+  background-color: rgba(239, 41, 41, 0.5019607843);
+}
+.fiche-container .description .desc .text {
+  color: #404040;
+  font-size: 14px;
+}
+.fiche-container .description .desc .validate-button {
+  background-color: #2bcb37 !important;
+  border-color: #2bcb37 !important;
+}
+
+.fiche-container .description .etat {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.fiche-container .description .attente {
+  font-size: 12px;
+  color: #cfcb00;
+}
+
+.fiche-container .description .vendue {
+  font-size: 12px;
+  color: #2bcb37;
+}

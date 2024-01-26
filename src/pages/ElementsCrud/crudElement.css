@@ -1,0 +1,75 @@
+.crud-element-div .page-title {
+  font-size: 16px;
+}
+.crud-element-div .crud-nav {
+  font-size: 10px;
+  position: static;
+}
+.crud-element-div .crud-nav .nav-item {
+  margin-right: 20px;
+  background: none;
+  border: none;
+  transition: 0.15s;
+}
+.crud-element-div .crud-nav .nav-item i {
+  margin-right: 10px;
+}
+.crud-element-div .crud-nav:visited {
+  color: #EF2929;
+}
+.crud-element-div .crud-nav .nav-item:hover {
+  color: #EF2929;
+}
+.crud-element-div .crud-section {
+  font-size: 12px;
+}
+.crud-element-div .crud-section .body {
+  height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.crud-element-div .crud-section .body::-webkit-scrollbar {
+  display: none;
+}
+.crud-element-div .crud-section .ligne {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: solid 1px #d9d9d9;
+}
+.crud-element-div .crud-section .first-ligne {
+  border-bottom: none;
+}
+.crud-element-div .crud-section .crud-input {
+  font-size: 12px !important;
+  padding: 5px 10px;
+  width: 100%;
+}
+.crud-element-div .crud-section .crud-input:focus-visible {
+  outline: 1px #EF2929 !important;
+}
+.crud-element-div .crud-section .crud-input-half {
+  width: 45% !important;
+  margin-right: 10px;
+}
+.crud-element-div .crud-section .action-button {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid #EF2929;
+  color: white;
+  background: #EF2929;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.crud-element-div .crud-section .action-button:hover {
+  color: #EF2929;
+  background-color: white;
+  border: 1px solid #EF2929;
+}
+.crud-element-div .card {
+  padding: 20px;
+}

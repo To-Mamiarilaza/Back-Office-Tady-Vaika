@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.login-body {
+  font-family: "Montserrat", sans-serif;
+  /* background-image: linear-gradient(to right, #F52650, #F5261825); */
+  background-image: url("../../assets/images/login_background.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-root {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+.login .login-div {
+  background-color: white;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  height: 600px;
+  border-radius: 20px;
+}
+
+
+.login .welcome-text {
+  font-size: 14px !important;
+  font-weight: bold;
+}
+.login .logo-div {
+  text-align: center;
+}
+.login .logo-div .logo {
+  width: 300px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.login .welcome-p {
+  color: #848484;
+  font-size: 14;
+  text-align: center;
+}
+.login .login-input {
+  width: 100%;
+  background: none;
+  padding: 10px 60px;
+  border: solid 1px #D9D9D9;
+  border-radius: 30px;
+  color: #848484;
+}
+.login .login-input:focus-visible {
+  border: rgba(245, 38, 24, 0.3137254902) !important;
+  outline-color: rgba(245, 38, 24, 0.3137254902) !important;
+}
+.login .input-container {
+  position: relative;
+}
+.login .submit-button {
+  width: 100%;
+  background: #F52618;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  padding: 10px 60px;
+  font-size: 16px;
+  border: solid 1px #D9D9D9;
+  border-radius: 30px;
+}
+.login i {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #D9D9D9;
+}
+.login .signup-text {
+  text-align: center;
+  font-size: 14px;
+  color: #848484;
+}
+.login .signup-text .signup-link {
+  color: #F52618;
+}
+.login .image-display {
+  background-image: url("../../assets/images/login-background.png");
+  background-size: cover;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  padding: 0;
+}
+.login .background-red-effect {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: linear-gradient(to bottom, rgba(116, 19, 12, 0.3960784314), rgba(245, 39, 24, 0));
+}
+.login .middle-text {
+  text-align: center;
+}
+.login .middle-text h4 {
+  font-size: 30px;
+  letter-spacing: 15px;
+}
+.login .middle-text p {
+  line-height: 30px;
+}

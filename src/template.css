@@ -1,0 +1,215 @@
+
+.sidebar {
+  height: 100%;
+  width: 70px;
+  position: fixed;
+  background-color: #101010;
+}
+.sidebar .sidebar-link {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: solid rgba(151, 151, 151, 0.3137254902) 1px;
+  flex-direction: column;
+}
+.sidebar .sidebar-link:hover, .sidebar .sidebar-link:visited, .sidebar .sidebar-link:active {
+  background-color: rgba(151, 151, 151, 0.3137254902);
+}
+.sidebar .sidebar-link i {
+  color: #D9D9D9;
+  font-size: 20px;
+}
+.sidebar .sidebar-link .link-name {
+  color: white;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+}
+.sidebar .sidebar-link-red {
+  background-color: #F52618 !important;
+  border-bottom: none;
+}
+
+.content {
+  margin-left: 70px;
+}
+.content .menu {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3137254902);
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 3;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .menu .icon {
+  margin-left: 20px;
+  padding: 10px;
+}
+.content .menu .icon h4 {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+  margin: 0;
+}
+.content .menu .icon p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #F52618;
+}
+.content .menu .widgets {
+  display: flex;
+  height: 100%;
+}
+.content .menu .widgets .widgets-section {
+  height: 100%;
+  min-width: 70px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  /* border-left: solid 1px #97979750; */
+}
+.content .menu .widgets .widgets-section i {
+  font-size: 16px;
+  color: #979797;
+}
+.content .menu .widgets .widgets-section .notif {
+  text-decoration: none;
+  position: relative;
+}
+.content .menu .widgets .widgets-section .notif-button {
+  background: none;
+  border: none;
+}
+.content .menu .widgets .widgets-section .notif-nb {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #F52618;
+  color: white;
+  font-size: 10px;
+  font-weight: bolder;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  transform: translate(7px, -3px);
+}
+.content .menu .widgets .widgets-section .dropdown-width {
+  width: 400px !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.content .menu .widgets .widgets-section .notif-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.content .menu .widgets .widgets-section .notif-item .img-section img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.content .menu .widgets .widgets-section .notif-item .text-section {
+  margin-left: 20px;
+  font-size: 12px;
+  color: #979797;
+}
+.content .menu .widgets .widgets-section .user-info {
+  display: flex;
+  padding: 0 20px;
+}
+.content .menu .widgets .widgets-section .user-info .profile-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.content .menu .widgets .widgets-section .user-info .profile-label {
+  margin-left: 20px;
+}
+.content .menu .widgets .widgets-section .user-info .profile-label .name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.content .menu .widgets .widgets-section .user-info .profile-label .mail {
+  margin: 0;
+  font-size: 12px;
+  color: #D9D9D9;
+}
+
+.container {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.card {
+  padding: 30px;
+  box-shadow: 2px 3px 5px rgba(211, 211, 211, 0.5);
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 !important;
+}
+
+.card-description {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 !important;
+  color: #686868;
+}
+
+.red-button {
+  display: inline-block;
+  background-color: #F52618;
+  text-align: center;
+  padding: 7px 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #F52618;
+}
+.red-button:hover {
+  background-color: white;
+  color: #F52618;
+}
+
+.cancel-button {
+  border: 1px solid #6c757d;
+  background-color: #6c757d !important;
+  color: white;
+}
+.cancel-button:hover {
+  background-color: #6c757d !important;
+  color: white;
+}
+
+.pagination {
+  font-size: 12px !important;
+}
+.pagination .page-item .page-link {
+  font-size: 12px !important;
+  color: #686868;
+}
+.pagination .page-item .page-link:focus {
+  box-shadow: 0 0 0 0.25rem rgba(239, 41, 41, 0.4392156863);
+}
+.pagination .active .page-link {
+  background-color: #686868;
+  border-color: #686868;
+  color: white;
+}
