@@ -1,6 +1,23 @@
 import face from "../../assets/images/face1.jpg"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+    const navigate = useNavigate();
+
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        
+    })
+
+    const deconnect = () => {
+        localStorage.removeItem("token");
+        navigate("/login");
+    }
+
   return (
     <>
       <div className="menu">
@@ -20,38 +37,8 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-                <div className="widgets-section dropdown">
-                    <button type="button" className="notif notif-button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i className="far fa-bell"></i>
-                        <span className="notif-nb">3</span>
-                    </button>
-                    <ul className="dropdown-menu dropdown-width pt-3" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                            <a className="notif-item" href="">
-                                <div className="img-section">
-                                    <img src={face} alt=""/>
-                                </div>
-                                <div className="text-section">
-                                    Une nouvelle annonce pour un <strong className="car-name">Toyota Hilux</strong> publie
-                                    par <strong>Rivo RAKOTO</strong>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a className="notif-item" href="">
-                                <div className="img-section">
-                                    <img src={face} alt=""/>
-                                </div>
-                                <div className="text-section">
-                                    La voiture <strong>Rexton</strong> de l'annonce <strong>123</strong> a ete vendue
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
                 <div className="widgets-section">
-                    <a href="">
+                    <a type="button" onClick={() => deconnect()}>
                         <i className="fas fa-power-off"></i>
                     </a>
                 </div>

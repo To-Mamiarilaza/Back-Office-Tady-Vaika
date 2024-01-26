@@ -1,0 +1,78 @@
+.login-body {
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(to right, #ffdada, rgba(245, 38, 24, 0.1450980392));
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  background-color: rgb(252, 252, 252);
+  height: 100vh;
+  margin: 0;
+}
+
+.login-root {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+.login .login-div {
+  width: 900px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(22, 22, 22, 0.5764705882);
+}
+
+.login .presentation {
+  background-color: rgba(239, 41, 41, 0.9254901961);
+  color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.login .presentation h3 {
+  font-size: 14px;
+}
+.login .presentation .welcome-text {
+  font-weight: 500;
+}
+.login .presentation .welcome-image {
+  width: 350px;
+}
+.login .formulaire {
+  color: white;
+  background-color: rgba(22, 22, 22, 0.9254901961);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.login .formulaire .logo {
+  color: #ef2929;
+}
+.login .formulaire h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.login .formulaire p {
+  font-size: 12px;
+}
+.login .formulaire .custom-form {
+  margin-top: 5px;
+  background: none;
+  color: #8f8f8f;
+  font-size: 14px;
+  border: none;
+  border-bottom: solid 1px #8f8f8f;
+  padding-bottom: 10px;
+  width: 100%;
+  outline: none;
+}
+.login .error {
+  color: #ef2929;
+  font-size: 12px;
+}
+.login .submit-button {
+  margin-top: 30px;
+  padding: 9px 30px;
+  background: #ef2929;
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}/*# sourceMappingURL=newLogin.css.map */
