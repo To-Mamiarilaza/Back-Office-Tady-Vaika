@@ -6,22 +6,22 @@ export default function TransmissionCardRow({
 }) {
   return (
     <>
-      <div class="ligne">
-        <div class="pe-3">{idTransmission}</div>
-        <div class="crud-input">{nomTransmission}</div>
+      <div className="ligne">
+        <div className="pe-3">{idTransmission}</div>
+        <div className="crud-input">{nomTransmission}</div>
         <div>
-          <div class="d-flex ms-3">
+          <div className="d-flex ms-3">
             <button
               onClick={() => onButtonUpdatePerformed(idTransmission, nomTransmission)}
-              class="action-button"
+              className="action-button"
             >
-              <i class="fas fa-cog"></i>
+              <i className="fas fa-cog"></i>
             </button>
             <button
               onClick={() => onDeleteFunction(idTransmission)}
-              class="action-button"
+              className="action-button"
             >
-              <i class="fas fa-trash"></i>
+              <i className="fas fa-trash"></i>
             </button>
           </div>
         </div>

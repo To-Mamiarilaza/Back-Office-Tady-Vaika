@@ -96,14 +96,14 @@ export default function CouleurCard() {
   
   return (
     <>
-      <div class="col-md-6 px-3 mb-4">
-        <div class="card mx-auto stat-section">
-          <h4 class="card-title">Couleur</h4>
-          <div class="crud-section mt-2">
-            <div class="header">
+      <div className="col-md-6 px-3 mb-4">
+        <div className="card mx-auto stat-section">
+          <h4 className="card-title">Couleur</h4>
+          <div className="crud-section mt-2">
+            <div className="header">
               <ColorInputComponent nomCouleur={nomCouleur} codeCouleur={codeCouleur} idCouleur={idCouleur} onColorNameChange={setNomCouleur} onColorValueChange={setCodeCouleur} actionHandler={actionHandler} />
             </div>
-            <div class="body">
+            <div className="body">
               {rows}
             </div>
           </div>

@@ -8,8 +8,15 @@ import "./crudElement.css";
 import TypeMoteurCard from "../../components/ElementsCrud/TypeMoteurCard";
 import MarqueCard from "../../components/ElementsCrud/MarqueCard";
 import ModeleCard from "../../components/ElementsCrud/ModeleCard";
+import { useNavigate } from "react-router-dom";
 
 export default function ElementsCrud() {
+  const navigate = useNavigate();
+
+  if (localStorage.getItem("token") == null) {
+    navigate("/login");
+  }
+
   return (
     <>
       <div className="container crud-element-div row mx-auto mt-4 mb-4">

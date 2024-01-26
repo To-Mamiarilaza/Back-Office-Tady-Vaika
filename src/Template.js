@@ -30,7 +30,7 @@ export default function Template() {
           className="sidebar-link"
           onClick={() => navigate("/annonces/pending")}
         >
-          <i class="far fa-clock"></i>
+          <i className="far fa-clock"></i>
           <div className="link-name">EN ATTENTES</div>
         </a>
         <a
@@ -46,7 +46,7 @@ export default function Template() {
           className="sidebar-link"
           onClick={() => navigate("/annonce/crud")}
         >
-          <i class="fas fa-file-invoice"></i>
+          <i className="fas fa-file-invoice"></i>
           <div className="link-name">ANNONCE</div>
         </a>
       </div>

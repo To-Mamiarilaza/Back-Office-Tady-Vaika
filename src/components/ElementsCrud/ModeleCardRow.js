@@ -6,22 +6,22 @@ export default function ModeleCardRow({
 }) {
   return (
     <>
-      <div class="ligne">
-        <div class="pe-3">{idModele}</div>
-        <div class="crud-input">{nomModele}</div>
+      <div className="ligne">
+        <div className="pe-3">{idModele}</div>
+        <div className="crud-input">{nomModele}</div>
         <div>
-          <div class="d-flex ms-3">
+          <div className="d-flex ms-3">
             <button
               onClick={() => onButtonUpdatePerformed(idModele, nomModele)}
-              class="action-button"
+              className="action-button"
             >
-              <i class="fas fa-cog"></i>
+              <i className="fas fa-cog"></i>
             </button>
             <button
               onClick={() => onDeleteFunction(idModele)}
-              class="action-button"
+              className="action-button"
             >
-              <i class="fas fa-trash"></i>
+              <i className="fas fa-trash"></i>
             </button>
           </div>
         </div>

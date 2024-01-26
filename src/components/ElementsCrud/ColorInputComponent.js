@@ -9,12 +9,12 @@ export default function ColorInputComponent({
   return (
     <>
       <form onSubmit={actionHandler}>
-        <div class="ligne first-ligne row">
-          <div class="col-md-1">{idCouleur}</div>
-          <div class="col-md-7">
+        <div className="ligne first-ligne row">
+          <div className="col-md-1">{idCouleur}</div>
+          <div className="col-md-7">
             <input
               type="text"
-              class="crud-input crud-input-half"
+              className="crud-input crud-input-half"
               placeholder="Nom du couleur"
               value={nomCouleur}
               onChange={(e) => onColorNameChange(e.target.value)}
@@ -22,15 +22,15 @@ export default function ColorInputComponent({
             />
             <input
               type="text"
-              class="crud-input crud-input-half"
+              className="crud-input crud-input-half"
               placeholder="Code couleur"
               value={codeCouleur}
               onChange={(e) => onColorValueChange(e.target.value)}
               required
             />
           </div>
-          <div class="col-md-4">
-            <div class="d-flex">
+          <div className="col-md-4">
+            <div className="d-flex">
               {idCouleur == 0 ? (
                 <button type="submit" className="action-button">
                   <i className="fas fa-save me-2"></i>
