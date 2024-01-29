@@ -155,7 +155,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatMoteur}%
+                        {annonceDetail.etatMoteur}
                       </div>
                     </div>
                   </div>
@@ -172,7 +172,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatFreinage}%
+                        {annonceDetail.etatFreinage}
                       </div>
                     </div>
                   </div>
@@ -189,7 +189,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatTransmission}%
+                        {annonceDetail.etatTransmission}
                       </div>
                     </div>
                   </div>
@@ -206,7 +206,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatPneu}%
+                        {annonceDetail.etatPneu}
                       </div>
                     </div>
                   </div>
@@ -223,7 +223,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatElectronique}%
+                        {annonceDetail.etatElectronique}
                       </div>
                     </div>
                   </div>
@@ -240,7 +240,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatSuspension}%
+                        {annonceDetail.etatSuspension}
                       </div>
                     </div>
                   </div>
