@@ -36,9 +36,9 @@
   color: #EF2929;
   border-top-color: #EF2929;
   background-color: white;
-  border-bottom-color: #f6f6f6;
-  border-left-color: #f6f6f6;
-  border-right: #f6f6f6;
+  border-bottom: #f6f6f6 !important;
+  border-left: #f6f6f6 !important;
+  border-right: #f6f6f6 !important;
 }
 .user-profile-div .nav-section .active::before {
   content: "";
@@ -54,6 +54,7 @@
   width: 180px;
   height: 180px;
   border-radius: 100%;
+  object-fit: cover;
 }
 .user-profile-div .user-profile .input-group {
   justify-content: space-between;
