@@ -148,8 +148,8 @@ export default function GlobalStats({ currentMonthStats }) {
                 </div>
               </div>
 
-              <a href="" className="red-button mt-4">
-                Voir ces annonces
+              <a href="#lastSaled" className="red-button mt-4">
+                Dernier annonces vendues
               </a>
             </div>
             <div className="col-md-7">

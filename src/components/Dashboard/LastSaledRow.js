@@ -9,7 +9,7 @@ export default function LastSaledRow({ idAnnonce, date, carImage, carname, usern
       <div className="annonce d-flex align-items-center mb-4">
         <div className="date me-3">{ date }</div>
         <div className="image me-3">
-          <img src={carImageTest} alt="Image du voiture" />
+          <img src={carImage} alt="Image du voiture" />
         </div>
         <div className="description me-5">
           <div className="car-name">{ carname }</div>

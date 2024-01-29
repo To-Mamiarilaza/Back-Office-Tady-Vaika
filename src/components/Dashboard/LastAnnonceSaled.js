@@ -22,7 +22,7 @@ export default function LastAnnonceSaled({ lastSaledAnnonces }) {
 
   return (
     <>
-      <div className="col-md-5 p-2">
+      <div className="col-md-5 p-2" id="lastSaled">
         <div className="card bottom-card">
           <h4 className="card-title">Dernières annonces vendues</h4>
           <hr />
