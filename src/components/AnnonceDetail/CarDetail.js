@@ -158,7 +158,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatMoteur}
+                        {annonceDetail.etatMoteur * 10}%
                       </div>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatFreinage}
+                        {annonceDetail.etatFreinage * 10}%
                       </div>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatTransmission}
+                        {annonceDetail.etatTransmission * 10}%
                       </div>
                     </div>
                   </div>
@@ -209,7 +209,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatPneu}
+                        {annonceDetail.etatPneu * 10}%
                       </div>
                     </div>
                   </div>
@@ -226,7 +226,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatElectronique}
+                        {annonceDetail.etatElectronique * 10}%
                       </div>
                     </div>
                   </div>
@@ -243,7 +243,7 @@ export default function CarDetail({ annonceDetail }) {
                         aria-valuemin="0"
                         aria-valuemax="10"
                       >
-                        {annonceDetail.etatSuspension}
+                        {annonceDetail.etatSuspension * 10}%
                       </div>
                     </div>
                   </div>
