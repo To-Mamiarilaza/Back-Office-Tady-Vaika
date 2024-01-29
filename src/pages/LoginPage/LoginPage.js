@@ -18,12 +18,12 @@ const LoginPage = () => {
         if (response.data.message == "success") {
           localStorage.setItem("token", response.data.data.token.token);
           sessionStorage.setItem("email", email);
-          sessionStorage.setItem("user", response.data.data.users);
+          sessionStorage.setItem("prenom", response.data.data.users.prenom);
+          sessionStorage.setItem("nom", response.data.data.users.nom);
           navigate("/dashboard");
         } else {
           setError(response.data.data);
         }
-        console.log(response);
       })
       .catch((error) => {
         alert(error);

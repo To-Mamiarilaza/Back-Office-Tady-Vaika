@@ -10,12 +10,18 @@ export default function Header() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    setUser(sessionStorage.getItem("user"));
+    const user = {
+      "nom": sessionStorage.getItem("nom"),
+      "prenom": sessionStorage.getItem("prenom"),
+      "email": sessionStorage.getItem("email")
+    }
+
+    setUser(user);
   }, []);
 
   const deconnect = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
