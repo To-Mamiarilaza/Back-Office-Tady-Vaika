@@ -93,7 +93,7 @@ export default function TypeMoteurCard() {
     <>
       <div className="col-md-6 px-3 mb-4">
         <div className="card mx-auto stat-section">
-          <h4 className="card-title">TypeMoteur</h4>
+          <h4 className="card-title">Type de moteur</h4>
           <div className="crud-section mt-2">
             <div className="header">
               <InputComponent
