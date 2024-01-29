@@ -13,6 +13,8 @@ function UserProfile() {
   const { id } = useParams();
   const { annonce } = useParams();
 
+  document.title = "Profile utilisateur";
+
   useEffect(() => {
     UserProfileService.getUserInformation(id).then((response) => {
       setUser(response.data);

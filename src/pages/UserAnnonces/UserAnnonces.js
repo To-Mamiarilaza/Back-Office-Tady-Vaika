@@ -13,6 +13,8 @@ function UserAnnonces() {
   const { id } = useParams();
   const { annonce } = useParams();
 
+  document.title = "Annonce utilisateur";
+
   useEffect(() => {
     UserProfileService.getUserAnnonces(id).then((response) => {
         if (response.data.message == "success") {

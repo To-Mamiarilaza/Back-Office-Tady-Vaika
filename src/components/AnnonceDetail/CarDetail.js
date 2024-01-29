@@ -1,6 +1,9 @@
 import FormatUtil from "../../services/FormatUtil";
 
 export default function CarDetail({ annonceDetail }) {
+
+  document.title = "Annonce";
+
   return (
     <>
       <div className="detail pt-5 px-3">
