@@ -13,6 +13,8 @@ function AnnonceCrud() {
   const [updateAnnonce, setUpdateAnnonce] = useState(null);
   const [seed, setSeed] = useState(0);
 
+  document.title = "Gestion des types d'annonce"
+
   if (localStorage.getItem("token") == null) {
     navigate("/login");
   }

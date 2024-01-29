@@ -13,6 +13,8 @@ import { useNavigate } from "react-router-dom";
 export default function ElementsCrud() {
   const navigate = useNavigate();
 
+  document.title = "Gestion des caractéristiques";
+
   if (localStorage.getItem("token") == null) {
     navigate("/login");
   }
@@ -22,7 +24,7 @@ export default function ElementsCrud() {
       <div className="container crud-element-div row mx-auto mt-4 mb-4">
         <div>
           <h4 className="page-title">
-            Gestion des caracteristiques d'une voiture
+            Gestion des caractéristiques d'une voiture
           </h4>
           <hr />
           <div className="crud-nav">
@@ -33,7 +35,7 @@ export default function ElementsCrud() {
               data-bs-slide-to="0"
               className="nav-item active"
             >
-              <i className="far fa-dot-circle"></i>Marque & Modele
+              <i className="far fa-dot-circle"></i>Marque & Modèle
             </button>
             <button
               type="button"
@@ -42,7 +44,7 @@ export default function ElementsCrud() {
               data-bs-slide-to="1"
               className="nav-item active"
             >
-              <i className="far fa-dot-circle"></i>Energie & Transmission
+              <i className="far fa-dot-circle"></i>Énergie et Transmission
             </button>
             <button
               type="button"

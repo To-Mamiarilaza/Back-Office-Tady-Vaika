@@ -3,11 +3,12 @@ import DashboardService from "../../services/DashboardService";
 import BestUserRow from "./BestUserRow";
 
 export default function BestUserList({ bestUserList }) {
-
   const rows = [];
   let rang = 1;
   bestUserList.forEach((bestUser) => {
-    rows.push(<BestUserRow key={bestUser.id} rang={rang} bestUser={bestUser} />);
+    rows.push(
+      <BestUserRow key={bestUser.id} rang={rang} bestUser={bestUser} />
+    );
     rang += 1;
   });
 
@@ -17,7 +18,7 @@ export default function BestUserList({ bestUserList }) {
         <div className="card best-user bottom-card">
           <h4 className="card-title">Meilleurs utilisateurs</h4>
           <h4 className="card-description">
-            Les 5 meilleurs utilisateurs trie par les commissions obtenue
+            Les 5 meilleurs utilisateurs triés par les commissions obtenues
           </h4>
           <table className="table mt-3">
             <thead>

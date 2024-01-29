@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const MODELE_API_BASE_URL = "http://localhost:8080/api/modeles";
+const MODELE_API_BASE_URL = BASE_URL + "modeles";
 
 // function for login
 const getAllModeles = () => {

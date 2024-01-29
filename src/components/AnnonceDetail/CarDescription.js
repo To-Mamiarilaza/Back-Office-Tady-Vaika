@@ -3,7 +3,7 @@ import FormatUtil from "../../services/FormatUtil";
 import PhotoGallery from "./PhotoGallery";
 import ValidationSection from "./ValidationSection";
 
-export default function CarDescription({ annonceDetail }) {
+export default function CarDescription({ annonceDetail, images }) {
   const navigate = useNavigate();
 
   return (
@@ -26,7 +26,7 @@ export default function CarDescription({ annonceDetail }) {
           <h4 className="numero">{annonceDetail.numero}</h4>
         </div>
 
-        <PhotoGallery />
+        <PhotoGallery images={images} />
 
         <div className="desc mt-5 row">
           <div className="col-md-7">

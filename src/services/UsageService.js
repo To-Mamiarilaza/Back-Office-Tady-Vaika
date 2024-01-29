@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const USAGE_API_BASE_URL = "http://localhost:8080/api/usages";
+const USAGE_API_BASE_URL = BASE_URL + "usages";
 
 // function for login
 const getAllUsages = () => {

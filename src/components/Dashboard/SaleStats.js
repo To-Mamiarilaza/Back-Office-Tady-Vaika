@@ -73,7 +73,7 @@ export default function SaleStats({ marqueStats }) {
     <>
       <div className="col-md-4 p-2">
         <div className="card stat-section">
-          <h4 className="card-title">Vente reussie par marque</h4>
+          <h4 className="card-title">Vente réussie par marque</h4>
           <h4 className="card-description">Statistiques annuelle</h4>
 
           <div className="chartContainer mt-4 d-flex justify-content-center">

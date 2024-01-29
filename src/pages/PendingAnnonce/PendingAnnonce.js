@@ -16,8 +16,10 @@ function PendingAnnonce() {
     navigate("/login");
   }
 
+  document.title = "Annonce en attente";
+
   useEffect(() => {
-    AnnonceService.getAllAnnonces().then((response) => {
+    AnnonceService.getPendingAnnonces().then((response) => {
       setAnnonces(response.data);
     });
   }, []);
@@ -61,9 +63,9 @@ function PendingAnnonce() {
       <div className="container pending-annonces mx-auto mt-4">
         <div className="card stat-section">
           <div className="row px-3">
-            <h4 className="card-title">Annonces en attentes de valiation</h4>
+            <h4 className="card-title">Annonces en attente de validation</h4>
             <h4 className="card-description">
-              Ces annonces ne sont pas encore vue publiquement
+            Ces annonces ne sont pas encore visibles publiquement
             </h4>
             <table className="table mt-3 pending-list">
               <thead>
@@ -72,7 +74,7 @@ function PendingAnnonce() {
                   <th>Date</th>
                   <th>Voiture</th>
                   <th>Description</th>
-                  <th>Proprietaire</th>
+                  <th>Propriétaire</th>
                   <th className="prix">Prix</th>
                   <th></th>
                 </tr>
@@ -88,13 +90,13 @@ function PendingAnnonce() {
                     type="button"
                     onClick={() => previousPagination()}
                   >
-                    Previous
+                    Retour
                   </a>
                 </li>
                 {paginationButtons}
                 <li className="page-item">
                   <a className="page-link" type="button" onClick={() => nextPagination()}>
-                    Next
+                    Suivant
                   </a>
                 </li>
               </ul>

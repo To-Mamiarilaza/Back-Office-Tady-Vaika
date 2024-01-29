@@ -15,7 +15,7 @@ function UserProfile() {
 
   useEffect(() => {
     UserProfileService.getUserInformation(id).then((response) => {
-      setUser(response.data.data);
+      setUser(response.data);
     });
   });
 
@@ -54,7 +54,7 @@ function UserProfile() {
 
               <div className="user-profile row mt-5">
                 <div className="col-md-4 d-flex justify-content-center align-items-start">
-                  <img src={face} alt="" />
+                  <img src={user.image} alt="" />
                 </div>
                 <div className="col-md-7 ps-5">
                   <div className="input-group">

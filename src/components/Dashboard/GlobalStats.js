@@ -64,7 +64,7 @@ export default function GlobalStats({ currentMonthStats }) {
         },
         {
           type: "bar",
-          label: "Annonnce vendue",
+          label: "Annonce vendue",
           backgroundColor: "rgba(16,16,16,0.75)",
           borderColor: "rgba(16,16,16,0.75)",
           borderWidth: 1,
@@ -127,7 +127,7 @@ export default function GlobalStats({ currentMonthStats }) {
             <div className="col-md-5">
               <h4 className="card-title">Tableau de bord</h4>
               <h4 className="card-description">
-                Les resultats du mois actuelle
+                Les résultats du mois en cours
               </h4>
 
               <div className="mt-3">
@@ -153,7 +153,7 @@ export default function GlobalStats({ currentMonthStats }) {
               </a>
             </div>
             <div className="col-md-7">
-              <h4 className="card-title">Statistiques annuelle</h4>
+              <h4 className="card-title">Statistiques annuelles</h4>
               <form action="" className="mt-3">
                 <div className="d-flex">
                   <input
@@ -167,7 +167,9 @@ export default function GlobalStats({ currentMonthStats }) {
                     className="red-button ms-3"
                     value="Consulter"
                     onClick={(e) => setTargetYear(year)}
-                  >Valider</button>
+                  >
+                    Valider
+                  </button>
                 </div>
               </form>
 

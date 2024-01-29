@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const TAILLE_API_BASE_URL = "http://localhost:8080/api/tailles";
+const TAILLE_API_BASE_URL = BASE_URL + "tailles";
 
 // function for login
 const getAllTailles = () => {

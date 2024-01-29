@@ -92,11 +92,11 @@ export default function ModeleCard() {
     <>
       <div className="col-md-6 px-3 mb-4">
         <div className="card mx-auto stat-section">
-          <h4 className="card-title">Modele</h4>
+          <h4 className="card-title">Modèle</h4>
           <div className="crud-section mt-2">
             <div className="header">
               <InputComponent
-                placeholder={"Nom du modele"}
+                placeholder={"Nom du modèle"}
                 inputValue={inputValue}
                 inputId={inputId}
                 onChangeValue={setInputValue}

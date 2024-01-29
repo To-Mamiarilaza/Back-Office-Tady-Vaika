@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const ENERGIE_API_BASE_URL = "http://localhost:8080/api/energies";
+const ENERGIE_API_BASE_URL = BASE_URL + "energies";
 
 // function for login
 const getAllEnergies = () => {

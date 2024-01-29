@@ -4,9 +4,11 @@ import CarDescription from "../../components/AnnonceDetail/CarDescription";
 import { useEffect, useState } from "react";
 import AnnonceService from "../../services/AnnonceService";
 import { useParams } from "react-router-dom";
+import { error } from "jquery";
 
 export default function AnnonceDetail() {
   const [annonceDetail, setAnnonceDetail] = useState(null);
+  const [images, setImages] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,6 +19,16 @@ export default function AnnonceDetail() {
       .catch((error) => {
         console.log(error);
       });
+
+    AnnonceService.getAnnonceImages(id)
+      .then((response) => {
+        setImages(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+
+    
   }, []);
 
   return (
@@ -24,7 +36,7 @@ export default function AnnonceDetail() {
       {annonceDetail !== null ? (
         <div className="fiche-container">
           <CarDetail annonceDetail={annonceDetail} />
-          <CarDescription annonceDetail={annonceDetail} />
+          <CarDescription annonceDetail={annonceDetail} images={images} />
         </div>
       ) : (
         <></>

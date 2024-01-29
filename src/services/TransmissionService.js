@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const TRANSMISSION_API_BASE_URL = "http://localhost:8080/api/transmissions";
+const TRANSMISSION_API_BASE_URL = BASE_URL + "transmissions";
 
 // function for login
 const getAllTransmissions = () => {

@@ -1,10 +1,11 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const USER_API_BASE_URL = "http://localhost:8080/api/";
+const USER_API_BASE_URL = BASE_URL;
 
 // function for login
 const getUserInformation = (idUser) => {
-    return axios.get(USER_API_BASE_URL + "users/" + idUser);
+    return axios.get(USER_API_BASE_URL + "v_user_complets/" + idUser);
 }
 
 const getUserAnnonces = (idUser) => {

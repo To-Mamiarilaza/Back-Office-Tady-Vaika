@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const TYPE_MOTEUR_API_BASE_URL = "http://localhost:8080/api/type_moteurs";
+const TYPE_MOTEUR_API_BASE_URL = BASE_URL + "type_moteurs";
 
 // function for login
 const getAllTypeMoteurs = () => {

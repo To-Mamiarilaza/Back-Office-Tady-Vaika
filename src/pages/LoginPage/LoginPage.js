@@ -16,7 +16,9 @@ const LoginPage = () => {
     AuthentificationService.login(email, password)
       .then((response) => {
         if (response.data.message == "success") {
-          localStorage.setItem("token", response.data.data.token);
+          localStorage.setItem("token", response.data.data.token.token);
+          sessionStorage.setItem("email", email);
+          sessionStorage.setItem("user", response.data.data.users);
           navigate("/dashboard");
         } else {
           setError(response.data.data);
@@ -46,8 +48,7 @@ const LoginPage = () => {
         <div className="login-div mt-5 mb-5 row mx-auto">
           <div className="col-md-6 p-5 text-center presentation">
             <p className="mt-3 welcome-text">
-              Dans <span className="logo">Jery vaika</span>, vous trouverez le
-              meilleur voiture qui vous convient
+              Dans Jery Vaika, vous trouverez la meilleure voiture qui vous convient.
             </p>
             <img src={bigLogo} className="welcome-image mt-5 mx-auto" alt="" />
           </div>

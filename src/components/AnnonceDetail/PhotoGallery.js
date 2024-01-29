@@ -1,8 +1,33 @@
-import car1 from '../../assets/images/car/car1.jpg';
-import car2 from '../../assets/images/car/car2.jpg';
-import car3 from '../../assets/images/car/car3.jpg';
+import car1 from "../../assets/images/car/car1.jpg";
+import car2 from "../../assets/images/car/car2.jpg";
+import car3 from "../../assets/images/car/car3.jpg";
 
-export default function PhotoGallery() {
+export default function PhotoGallery({ images }) {
+  const imageRows = [];
+  let active = true;
+  images.forEach((image) => {
+    imageRows.push(
+      <div className={active ? "carousel-item active" : "carousel-item"}>
+        <img src={image.image} className="d-block w-100" alt="..." />
+      </div>
+    );
+
+    active = false;
+  });
+
+  const carouselButtons = [];
+  for (let i = 0; i < images.length; i++) {
+    carouselButtons.push(
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        aria-current={i == 0 && true}
+        data-bs-slide-to={i}
+        className={i == 0 ? "custom-indicator-button active" : "custom-indicator-button" }
+      ></button>
+    );
+  }
+
   return (
     <>
       <div className="photo-gallery mt-4 px-4">
@@ -11,17 +36,7 @@ export default function PhotoGallery() {
           className="carousel slide"
           data-bs-ride="carousel"
         >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={car1} className="d-block w-100" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={car2} className="d-block w-100" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={car3} className="d-block w-100" alt="..." />
-            </div>
-          </div>
+          <div className="carousel-inner">{imageRows}</div>
 
           <div className="controller d-flex justify-content-between align-items-center">
             <div className="prev-button">
@@ -38,25 +53,7 @@ export default function PhotoGallery() {
               </button>
             </div>
             <div className="custom-indicator carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                aria-current="true"
-                data-bs-slide-to="0"
-                className="custom-indicator-button active"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                className="custom-indicator-button"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                className="custom-indicator-button"
-              ></button>
+              {carouselButtons}
             </div>
             <div className="next-button">
               <button

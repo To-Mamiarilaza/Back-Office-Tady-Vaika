@@ -12,7 +12,7 @@ export default function LastAnnonceSaled({ lastSaledAnnonces }) {
         key={lastSaled.id}
         idAnnonce={lastSaled.id}
         date={lastSaled.dateAnnonce}
-        carImage={lastSaled.carImage}
+        carImage={lastSaled.image}
         carname={lastSaled.nomMarque}
         username={lastSaled.prenomUsers}
         price={FormatUtil.toMoneyFormat(lastSaled.commissionObtenue)}
@@ -24,7 +24,7 @@ export default function LastAnnonceSaled({ lastSaledAnnonces }) {
     <>
       <div className="col-md-5 p-2">
         <div className="card bottom-card">
-          <h4 className="card-title">Dernieres annonces vendues</h4>
+          <h4 className="card-title">Dernières annonces vendues</h4>
           <hr />
           <div className="annonces-list mt-3">{lastSaledRows}</div>
         </div>

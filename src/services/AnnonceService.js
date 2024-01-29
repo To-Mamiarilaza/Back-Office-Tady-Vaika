@@ -1,6 +1,8 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const ANNONCE_API_BASE_URL = "http://localhost:8080/api/";
+
+const ANNONCE_API_BASE_URL = BASE_URL;
 
 // function for login
 const getAnnonceDetail = (idAnnonce) => {
@@ -15,6 +17,11 @@ const getPendingAnnonces = () => {
 // get all annonces
 const getAllAnnonces = () => {
     return axios.get(ANNONCE_API_BASE_URL + "v_annonce_complets");
+}
+
+// get all annonce image
+const getAnnonceImages = (idAnnonce) => {
+    return axios.get(ANNONCE_API_BASE_URL + "photo_annonces/annonce/" + idAnnonce);
 }
 
 const updateAnnonceStatus = (annonce, status) => {
@@ -35,7 +42,8 @@ const AnnonceService = {
     getAnnonceDetail,
     updateAnnonceStatus,
     getPendingAnnonces,
-    getAllAnnonces
+    getAllAnnonces,
+    getAnnonceImages
 }
 
 export default AnnonceService;

@@ -16,7 +16,7 @@ export default function App() {
     {/* Test */}
       <Router>
         <Routes>
-          <Route path="/login" exact Component={LoginPage} />
+          <Route path="/" exact Component={LoginPage} />
           <Route
             path="/*"
             exact

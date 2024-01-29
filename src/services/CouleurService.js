@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const COULEUR_API_BASE_URL = "http://localhost:8080/api/couleurs";
+const COULEUR_API_BASE_URL = BASE_URL + "couleurs";
 
 // function for login
 const getAllCouleurs = () => {

@@ -30,6 +30,7 @@ export default function Dashboard() {
     // get all in one
     DashboardService.getDashboardStats()
     .then((response) => {
+      console.log(response);
       if (response.data.message === "success") {
         setCurrentMonthStats(response.data.data.v_stat_current_month[0]);
         setLastSaledAnnonces(response.data.data.v_latest_annonce_vendu);
@@ -70,7 +71,7 @@ export default function Dashboard() {
               label={"Nombre total d' annonces"}
             />
             <NumberCard
-              title={"Annonces vendueus"}
+              title={"Annonces vendues"}
               icon={"fas fa-clipboard-check"}
               number={importantNumbers.nbAnnonceVendu}
               label={"Les annonces vendues"}

@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const DASHBOARD_API_BASE_URL = "http://localhost:8080/api/";
+const DASHBOARD_API_BASE_URL = BASE_URL;
 
 // Function for getting all fiches
 const getCurrentMonthStats = () => {

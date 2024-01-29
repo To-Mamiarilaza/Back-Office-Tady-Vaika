@@ -1,6 +1,7 @@
 import axios from "axios";
+import BASE_URL from "./BaseUrlService";
 
-const TYPE_ANNONCE_API_BASE_URL = "http://localhost:8080/api/type_annonces";
+const TYPE_ANNONCE_API_BASE_URL = BASE_URL + "type_annonces";
 
 // function for login
 const getAllTypeAnnonces = () => {
