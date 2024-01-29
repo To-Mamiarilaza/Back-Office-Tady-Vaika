@@ -71,8 +71,8 @@
   color: #686868;
 }
 .fiche-container .description .photo-gallery .carousel-inner img {
-  width: 100%;
   height: 430px;
+  object-fit: cover;
 }
 .fiche-container .description .photo-gallery .controller {
   margin-top: 35px;

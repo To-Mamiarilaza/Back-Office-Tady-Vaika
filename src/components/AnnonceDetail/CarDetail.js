@@ -150,10 +150,10 @@ export default function CarDetail({ annonceDetail }) {
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: annonceDetail.etatMoteur + "%" }}
+                        style={{ width: annonceDetail.etatMoteur * 100 + "%" }}
                         aria-valuenow={annonceDetail.etatMoteur}
                         aria-valuemin="0"
-                        aria-valuemax="100"
+                        aria-valuemax="10"
                       >
                         {annonceDetail.etatMoteur}%
                       </div>
@@ -167,10 +167,10 @@ export default function CarDetail({ annonceDetail }) {
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: annonceDetail.etatFreinage + "%" }}
+                        style={{ width: annonceDetail.etatFreinage * 100 + "%" }}
                         aria-valuenow={annonceDetail.etatFreinage}
                         aria-valuemin="0"
-                        aria-valuemax="100"
+                        aria-valuemax="10"
                       >
                         {annonceDetail.etatFreinage}%
                       </div>
@@ -184,10 +184,10 @@ export default function CarDetail({ annonceDetail }) {
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: annonceDetail.etatTransmission + "%" }}
+                        style={{ width: annonceDetail.etatTransmission * 100 + "%" }}
                         aria-valuenow={annonceDetail.etatTransmission}
                         aria-valuemin="0"
-                        aria-valuemax="100"
+                        aria-valuemax="10"
                       >
                         {annonceDetail.etatTransmission}%
                       </div>
@@ -201,10 +201,10 @@ export default function CarDetail({ annonceDetail }) {
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: annonceDetail.etatPneu + "%" }}
+                        style={{ width: annonceDetail.etatPneu * 100 + "%" }}
                         aria-valuenow={annonceDetail.etatPneu}
                         aria-valuemin="0"
-                        aria-valuemax="100"
+                        aria-valuemax="10"
                       >
                         {annonceDetail.etatPneu}%
                       </div>
@@ -218,10 +218,10 @@ export default function CarDetail({ annonceDetail }) {
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: annonceDetail.etatElectronique + "%" }}
+                        style={{ width: annonceDetail.etatElectronique * 100 + "%" }}
                         aria-valuenow={annonceDetail.etatElectronique}
                         aria-valuemin="0"
-                        aria-valuemax="100"
+                        aria-valuemax="10"
                       >
                         {annonceDetail.etatElectronique}%
                       </div>
@@ -235,10 +235,10 @@ export default function CarDetail({ annonceDetail }) {
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: annonceDetail.etatSuspension + "%" }}
+                        style={{ width: annonceDetail.etatSuspension * 100 + "%" }}
                         aria-valuenow={annonceDetail.etatSuspension}
                         aria-valuemin="0"
-                        aria-valuemax="100"
+                        aria-valuemax="10"
                       >
                         {annonceDetail.etatSuspension}%
                       </div>
