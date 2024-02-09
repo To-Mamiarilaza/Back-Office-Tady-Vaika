@@ -11,14 +11,15 @@ export default function Header({ messageIdOtherUser, setMessageIdOtherUser }) {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const user = {
-      nom: sessionStorage.getItem("nom"),
-      prenom: sessionStorage.getItem("prenom"),
-      email: sessionStorage.getItem("email"),
-      image: sessionStorage.getItem("image"),
-    };
-
-    setUser(user);
+    if (sessionStorage.getItem("nom") != null) {
+      const user = {
+        nom: sessionStorage.getItem("nom"),
+        prenom: sessionStorage.getItem("prenom"),
+        email: sessionStorage.getItem("email"),
+        image: sessionStorage.getItem("image"),
+      };  
+      setUser(user);
+    }
   }, []);
 
   const deconnect = () => {
