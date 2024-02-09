@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import FormatUtil from "../../services/FormatUtil";
 import PhotoGallery from "./PhotoGallery";
 import ValidationSection from "./ValidationSection";
+import FavoriteSection from "./FavoriteSection";
+import UserProfileMapping from "../../services/UserProfileMapping";
 
 export default function CarDescription({ annonceDetail, images }) {
   const navigate = useNavigate();
@@ -35,7 +37,15 @@ export default function CarDescription({ annonceDetail, images }) {
             <p className="text">{annonceDetail.description}</p>
             <button className="red-button" onClick={() => navigate("/user/" + annonceDetail.idUsers + "/profile/" + annonceDetail.id )} >Voir le proprietaire</button>
           </div>
-          <ValidationSection annonceDetail={annonceDetail} />
+
+          {sessionStorage.getItem("profile") == UserProfileMapping.ADMIN && (
+            <ValidationSection annonceDetail={annonceDetail} />
+          )}
+
+          {sessionStorage.getItem("profile") == UserProfileMapping.USER && (
+            <FavoriteSection  idAnnonce={annonceDetail.id}/>
+          )}
+
         </div>
       </div>
     </>

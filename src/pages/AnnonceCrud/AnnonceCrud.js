@@ -5,7 +5,6 @@ import TypeAnnonceService from "../../services/TypeAnnonceService";
 import { useNavigate } from "react-router";
 import AnnonceUpdateModal from "../../components/AnnonceCrud/AnnonceUpdateModal";
 import AnnonceInsertionModal from "../../components/AnnonceCrud/AnnonceInsertionModal";
-import $ from "jquery";
 
 function AnnonceCrud() {
   const navigate = useNavigate();

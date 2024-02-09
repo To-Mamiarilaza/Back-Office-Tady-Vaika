@@ -9,7 +9,7 @@ const getUserInformation = (idUser) => {
 }
 
 const getUserAnnonces = (idUser) => {
-    return axios.get(USER_API_BASE_URL + "v_annonce_complets/users/" + idUser);
+    return axios.get(USER_API_BASE_URL + "v_annonce_complets/users/" + idUser+ "?page=0&size=1000");
 }
 
 

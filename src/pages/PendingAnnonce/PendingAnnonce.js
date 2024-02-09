@@ -20,7 +20,7 @@ function PendingAnnonce() {
 
   useEffect(() => {
     AnnonceService.getPendingAnnonces().then((response) => {
-      setAnnonces(response.data);
+      setAnnonces(response.data.data);
     });
   }, []);
 

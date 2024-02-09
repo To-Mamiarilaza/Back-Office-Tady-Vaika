@@ -19,9 +19,19 @@ const getAllAnnonces = () => {
     return axios.get(ANNONCE_API_BASE_URL + "v_annonce_complets");
 }
 
+// get annonces with filter
+const getFilteredAnnonces = (filter) => {
+    return axios.post(ANNONCE_API_BASE_URL + "annonce_filter", filter);
+}
+
 // get all annonce image
 const getAnnonceImages = (idAnnonce) => {
     return axios.get(ANNONCE_API_BASE_URL + "photo_annonces/annonce/" + idAnnonce);
+}
+
+// get all annonce for user
+const getAllPublishedAnnonce = (page, size) => {
+    return axios.get(ANNONCE_API_BASE_URL + "v_annonce_complets/non_vendu?page=" + page + "&size=" + size);
 }
 
 const updateAnnonceStatus = (annonce, status) => {
@@ -43,7 +53,9 @@ const AnnonceService = {
     updateAnnonceStatus,
     getPendingAnnonces,
     getAllAnnonces,
-    getAnnonceImages
+    getAnnonceImages,
+    getAllPublishedAnnonce,
+    getFilteredAnnonces
 }
 
 export default AnnonceService;

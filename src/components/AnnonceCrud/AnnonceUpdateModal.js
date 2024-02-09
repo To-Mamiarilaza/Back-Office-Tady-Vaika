@@ -1,4 +1,3 @@
-import { Modal } from "bootstrap";
 import { useEffect, useReducer, useRef, useState } from "react";
 
 export default function AnnonceUpdateModal({updateAnnonce, onAnnonceUpdate}) {

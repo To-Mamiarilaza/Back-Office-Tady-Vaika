@@ -3,12 +3,13 @@ import bigLogo from "../../assets/images/welcome-image.png";
 import "./newLogin.css";
 import { useNavigate } from "react-router-dom";
 import AuthentificationService from "../../services/AuthentificationService";
+import UserProfileMapping from "../../services/UserProfileMapping";
 
 const LoginPage = () => {
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("to@gmail.com");
-  const [password, setPassword] = useState("to");
+  const [email, setEmail] = useState("johan@gmail.com");
+  const [password, setPassword] = useState("johan");
   const [error, setError] = useState("");
 
   const onSubmitHandler = (e) => {
@@ -20,7 +21,14 @@ const LoginPage = () => {
           sessionStorage.setItem("email", email);
           sessionStorage.setItem("prenom", response.data.data.users.prenom);
           sessionStorage.setItem("nom", response.data.data.users.nom);
-          navigate("/dashboard");
+          sessionStorage.setItem("image", response.data.data.users.image);
+
+          if (response.data.data.users.idprofile != UserProfileMapping.ADMIN) {
+            setError("Seule les administrateurs ont un access au back office !");
+          } else {
+            sessionStorage.setItem("profile", UserProfileMapping.ADMIN);
+            navigate("/dashboard");
+          }
         } else {
           setError(response.data.data);
         }
@@ -55,6 +63,7 @@ const LoginPage = () => {
           <div className="col-md-6 p-5 formulaire">
             <form action="mt-3">
               <h3 className="mt-3">Connectez-vous !!</h3>
+              <p className="mt-3">Veillez s'authentifier pour commencer la gestion de l' application </p>
               <div className="mt-5">
                 <h4>EMAIL</h4>
                 <input

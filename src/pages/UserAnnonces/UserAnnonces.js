@@ -17,11 +17,12 @@ function UserAnnonces() {
 
   useEffect(() => {
     UserProfileService.getUserAnnonces(id).then((response) => {
+      console.log(response);
         if (response.data.message == "success") {
-            setAnnonces(response.data.data);
+            setAnnonces(response.data.data.content);
         }
     });
-  });
+  }, []);
 
   const getProfileLink = () => {
     if (annonce == undefined) {

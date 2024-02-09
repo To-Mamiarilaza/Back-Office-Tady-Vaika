@@ -1,0 +1,223 @@
+.annonces .title {
+  font-size: 20px;
+}
+.annonces .filtre-action button {
+  background: none;
+  border: none;
+  font-size: 14px;
+}
+.annonces .page-content {
+  display: flex;
+  overflow-x: hidden;
+}
+.annonces .page-content .listes {
+  width: 100%;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+@keyframes closeFilter {
+  0% {
+    width: 30%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  100% {
+    width: 0%;
+    padding: 0 !important;
+  }
+}
+.annonces .page-content .hide {
+  animation: closeFilter 0.5s forwards;
+}
+@keyframes openFilter {
+  0% {
+    width: 0%;
+    padding: 0 !important;
+  }
+  100% {
+    width: 30%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+.annonces .page-content .show-filter {
+  animation: openFilter 0.5s forwards;
+}
+.annonces .page-content .filtres {
+  width: 0%;
+  padding: 0;
+  overflow-x: hidden;
+}
+.annonces .page-content .filtres .title {
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.annonces .page-content .filtres .favoris-filter label {
+  font-size: 14px !important;
+  white-space: nowrap;
+}
+.annonces .page-content .filtres .price-filter .forch-label {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.annonces .page-content .filtres .price-filter input {
+  width: 90px;
+  padding-left: 10px;
+  font-size: 12px;
+}
+.annonces .page-content .filtres .price-filter .valider button {
+  font-size: 12px;
+  padding: 3px 25px;
+  margin-top: 8px;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-item {
+  background: none !important;
+  border: none !important;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-button {
+  background: none;
+  color: #000000;
+  border: none;
+  border-bottom: #d1d1d1 1px solid;
+  border-radius: 0px !important;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 8px;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-button::after {
+  background: none;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path%20fill-rule='evenodd'%20d='M1.646%204.646a.5.5%200%200%201%20.708%200L8%2010.293l5.646-5.647a.5.5%200%200%201%20.708.708l-6%206a.5.5%200%200%201-.708%200l-6-6a.5.5%200%200%201%200-.708z'/></svg>");
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-button:focus {
+  box-shadow: none;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-button:active {
+  box-shadow: none;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-body {
+  padding: 10px 0px;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-body .filter-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-body .filter-check input {
+  width: 12px;
+  height: 12px;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-body .filter-check label {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-body .color-input {
+  border-radius: 100%;
+  width: 17px !important;
+  height: 17px !important;
+  background-color: #e12418;
+}
+.annonces .page-content .filtres .accordion-filter .accordion .accordion-body .color-input:focus {
+  box-shadow: none;
+  border: none;
+}
+.annonces .annonces-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  height: 760px !important;
+  overflow: hidden !important;
+}
+.annonces .annonces-list .annonce-card {
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(1000px);
+  cursor: pointer;
+  animation: annonceListOrder 0.5s ease-out forwards;
+}
+.annonces .annonces-list .annonce-card .image {
+  position: relative;
+}
+.annonces .annonces-list .annonce-card .favorite {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  color: rgb(212, 212, 212);
+  font-size: 18px;
+  cursor: pointer;
+}
+.annonces .annonces-list .annonce-card .favorite .turn-icon {
+  transition: transform 0.5s ease;
+}
+.annonces .annonces-list .annonce-card .favorite .turn-icon:hover {
+  transform: rotate(360deg);
+}
+.annonces .annonces-list .annonce-card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.annonces .annonces-list .annonce-card .marque {
+  color: rgb(80, 80, 80);
+  align-items: end;
+}
+.annonces .annonces-list .annonce-card .marque .version {
+  font-size: 12px;
+  color: rgb(120, 120, 120);
+}
+.annonces .annonces-list .annonce-card .categorie {
+  justify-content: space-between;
+}
+.annonces .annonces-list .annonce-card .categorie div {
+  font-size: 9px;
+  padding: 8px 5px 5px 5px;
+  background-color: #f2f2f2;
+  width: 80px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.annonces .annonces-list .annonce-card hr {
+  margin: 0.7rem 0 !important;
+}
+.annonces .annonces-list .annonce-card .action-button {
+  font-size: 12px;
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  color: #e12418;
+  transition: 0.5s;
+}
+.annonces .annonces-list .annonce-card .action-button:hover {
+  color: #8a1a12;
+}
+@keyframes annonceListOrder {
+  0% {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.annonces .annonces-list .annonce-card:first-child {
+  animation-delay: 0s;
+}
+.annonces .annonces-list .annonce-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.annonces .annonces-list .annonce-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.annonces .annonces-list .annonce-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.annonces .annonces-list .annonce-card:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.annonces .annonces-list .annonce-card:nth-child(6) {
+  animation-delay: 0.6s;
+}

@@ -14,7 +14,7 @@ export default function AnnonceDetail() {
   useEffect(() => {
     AnnonceService.getAnnonceDetail(id)
       .then((response) => {
-        setAnnonceDetail(response.data);
+        setAnnonceDetail(response.data.data);
       })
       .catch((error) => {
         console.log(error);
@@ -22,7 +22,8 @@ export default function AnnonceDetail() {
 
     AnnonceService.getAnnonceImages(id)
       .then((response) => {
-        setImages(response.data.data);
+        console.log(response);
+        setImages(response.data.data.content);
       })
       .catch((error) => {
         console.log(error);

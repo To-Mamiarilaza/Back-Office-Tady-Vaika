@@ -4,11 +4,11 @@ import face from "../../assets/images/face1.jpg";
 import UserProfileService from "../../services/UserProfileService";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
+import UserProfileMapping from "../../services/UserProfileMapping";
 
-function UserProfile() {
+export default function UserProfile({ setMessageIdOtherUser }) {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
-
 
   const { id } = useParams();
   const { annonce } = useParams();
@@ -17,9 +17,9 @@ function UserProfile() {
 
   useEffect(() => {
     UserProfileService.getUserInformation(id).then((response) => {
-      setUser(response.data);
+      setUser(response.data.data);
     });
-  });
+  }, []);
 
   const getProfileLink = () => {
     if (annonce == undefined) {
@@ -27,7 +27,7 @@ function UserProfile() {
     } else {
       return "/user/" + id + "/profile/" + annonce;
     }
-  }
+  };
 
   const getUserAnnonceLink = () => {
     if (annonce == undefined) {
@@ -35,7 +35,11 @@ function UserProfile() {
     } else {
       return "/user/" + id + "/annonces/" + annonce;
     }
-  }
+  };
+
+  const contacterProprietaire = (idProprietaire) => {
+    setMessageIdOtherUser(idProprietaire);
+  };
 
   return (
     <>
@@ -45,10 +49,16 @@ function UserProfile() {
             <div className="card col-md-10 mx-auto stat-section">
               <h4 className="card-title">Profile de l'utilisateur</h4>
               <div className="nav-section d-flex align-items-center mt-4">
-                <button onClick={() => navigate(getProfileLink())} className="nav-item active">
+                <button
+                  onClick={() => navigate(getProfileLink())}
+                  className="nav-item active"
+                >
                   PROFILE
                 </button>
-                <button onClick={() => navigate(getUserAnnonceLink())} className="nav-item">
+                <button
+                  onClick={() => navigate(getUserAnnonceLink())}
+                  className="nav-item"
+                >
                   ANNONCES
                 </button>
                 <div className="nav-item empty">Empty</div>
@@ -80,11 +90,28 @@ function UserProfile() {
                     <div className="value">{user.addresse}</div>
                   </div>
 
-                  { annonce != undefined && (
-                    <div class="input-group">
-                      <button class="red-button" onClick={() => navigate("/annonces/" + annonce)}>Revenir a l'annonce</button>
-                    </div>
-                  )}
+                  <div className="d-flex">
+                    {annonce != undefined && (
+                      <div className="me-3">
+                        <button
+                          className="red-button"
+                          onClick={() => navigate("/annonces/" + annonce)}
+                        >
+                          Revenir a l'annonce
+                        </button>
+                      </div>
+                    )}
+                    {(user.id != sessionStorage.getItem("idUser") && sessionStorage.getItem("profile") != UserProfileMapping.ADMIN) && (
+                      <div className="">
+                        <button
+                          className="message-button"
+                          onClick={() => contacterProprietaire(user.id)}
+                        >
+                          <i class="fab fa-facebook-messenger me-2"></i> Contacter
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,5 +124,3 @@ function UserProfile() {
     </>
   );
 }
-
-export default UserProfile;
