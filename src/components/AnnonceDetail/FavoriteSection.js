@@ -4,13 +4,13 @@ import AnnonceFavorisService from "../../services/AnnonceFavorisService";
 export default function FavoriteSection({ idAnnonce }) {
   const [isFavorite, setIsFavorite] = useState(null);
 
-  useEffect(() => {
-    AnnonceFavorisService.checkIfFavorite(idAnnonce).then((response) => {
-      if (response.data.message == "success") {
-        setIsFavorite(response.data.data);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   AnnonceFavorisService.checkIfFavorite(idAnnonce).then((response) => {
+  //     if (response.data.message == "success") {
+  //       setIsFavorite(response.data.data);
+  //     }
+  //   });
+  // }, []);
 
   var buttonClass = "btn-outline-danger";
   var starIcon = "far fa-star";
@@ -29,12 +29,12 @@ export default function FavoriteSection({ idAnnonce }) {
         idAnnonce,
         sessionStorage.getItem("idUser")
       ).then((response) => {
-        AnnonceFavorisService.checkIfFavorite(idAnnonce).then((response) => {
-          console.log(response);
-          if (response.data.message == "success") {
-            setIsFavorite(response.data.data);
-          }
-        });
+        // AnnonceFavorisService.checkIfFavorite(idAnnonce).then((response) => {
+        //   console.log(response);
+        //   if (response.data.message == "success") {
+        //     setIsFavorite(response.data.data);
+        //   }
+        // });
       });
     } else {
       AnnonceFavorisService.removeFromFavorite(isFavorite).then((response) => {
